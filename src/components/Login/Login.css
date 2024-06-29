@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url('./background.jpg');/* Fondo oscuro */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-box {
+  background-color: rgba(40, 50, 65, 0.5); /* Fondo del cuadro de inicio de sesión con transparencia */
+  padding: 20px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  width: 400px; /* Ajusta el ancho según sea necesario */
+}
+
+.logo {
+  width: 200px; /* Ajusta el tamaño de la imagen del logo según sea necesario */
+}
+
+.login-header h2 {
+  color: #F7CFFB; /* Color del texto */
+  margin: 10px 0;
+}
+
+.login-header p {
+  color: #F7CFFB; /* Color del texto */
+  margin: 10px 0;
+}
+
+.login-header a {
+  color: #299BDB; /* Color del enlace */
+  text-decoration: none;
+}
+
+.login-header a:hover {
+  text-decoration: underline;
+}
+
+.input-field {
+  width: calc(100% - 20px); /* Ajusta el ancho para tener en cuenta el padding */
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #C2C8AF; /* Borde de los campos */
+  border-radius: 5px;
+}
+
+.login-button {
+  width: calc(100% - 20px); /* Ajusta el ancho para tener en cuenta el padding */
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  background-color: rgb(0, 0, 0); /* Color del botón */
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #2874A6; /* Cambio de color al pasar el ratón */
+}
