@@ -1,5 +1,6 @@
 import './Login.css';
-import Logo from './logo2.png';
+import { Link } from 'react-router-dom';
+import Logo from '../../assets/logo2.png';
 
 function Login() {
   return (
@@ -9,7 +10,7 @@ function Login() {
 
         <div className="login-header">
           <h2>Welcome Back</h2>
-          <p>Don't have an account yet? <a href="/signup">Sign up</a></p>
+          <p>Don't have an account yet? <Link to="/register">Create a account</Link>  </p>
         </div>
         <form className='login-form'>
           <input type="email" placeholder="Email Address" className="input-field" />
