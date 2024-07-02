@@ -1,38 +1,27 @@
-.app-layout {
-    display: flex;
-}
-
-.content {
-    transition: margin-left 0.3s;
-    margin-left: 200px; /* Espacio inicial del sidebar abierto */
-    padding: 20px;
-    flex: 1;
-}
-
-.navbar.closed ~ .content {
-    margin-left: 120px; /* Espacio del sidebar cerrado */
-}
-
 .navbar {
-    width: 200px;
-    height: 100vh;
-    background-color: #283241;
-    border-right: 1px solid #ddd;
-    transition: width 0.3s;
+    width: 100%;
+    height: 100px; /* Altura del navbar horizontal */
+    background-color: #74BB45;
+    border-bottom: 1px solid #ddd;
     position: fixed;
     top: 0;
     left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 1000;
 }
 
 .navbar.closed {
-    width: 120px;
+    height: 60px;
 }
 
 .navbar-header {
     display: flex;
     align-items: center;
+    width: 100%;
     justify-content: space-between;
-    padding: 10px;
 }
 
 .logo img {
@@ -48,23 +37,25 @@
 }
 
 .navbar-menu {
-    margin-top: 20px;
+    display: flex;
+    gap: 20px;
 }
 
 .navbar-item {
     display: flex;
     align-items: center;
-    padding: 10px 20px;
     text-decoration: none;
     color: #F7FCFB;
     transition: background 0.3s;
     cursor: pointer;
     background: none;
     border: none;
+    padding: 10px;
 }
 
 .navbar-item:hover {
-    background-color: #354253;
+    background-color: #2d793b;
+    border-radius: 5px;
 }
 
 .navbar-item .icon {
@@ -73,9 +64,13 @@
     margin-right: 10px;
 }
 
+.logout-button {
+    margin-left: auto; /* Empuja el botón "Salir" al extremo derecho */
+}
+
 .navbar.closed .navbar-item .icon,
 .logout-button {
-    margin: 0 auto;
+    margin: 0;
 }
 
 .navbar.closed .navbar-item .logout-button {
@@ -86,28 +81,16 @@
     display: none;
 }
 
+/* Ajuste del contenido para que comience debajo del navbar */
+.content {
+    margin-top: 100px; /* Altura del navbar */
+    padding: 20px;
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
-    .navbar {
-        width: 80px;
-    }
-    .navbar.open {
-        width: 100%;
-    }
-    .navbar.closed {
-        width: 80px;
-    }
-    .navbar-header {
-        justify-content: center;
-    }
-    .navbar-item {
-        justify-content: center;
-    }
-    .toggle-button {
-        justify-content: center;
-    }
-    .navbar.open .navbar-item span {
-        display: inline-block;
+    .navbar-menu {
+        gap: 10px;
     }
 }
 
@@ -115,22 +98,7 @@
     .logo img {
         width: 60px;
     }
-    .navbar {
-        width: 60px;
-    }
-    .navbar.open {
-        width: 100%;
-    }
-    .navbar.closed {
-        width: 80px;
-    }
-    .navbar-header {
-        justify-content: center;
-    }
-    .navbar-item {
-        justify-content: center;
-    }
-    .navbar.open .navbar-item span {
-        display: inline-block;
+    .navbar-menu {
+        gap: 5px;
     }
 }

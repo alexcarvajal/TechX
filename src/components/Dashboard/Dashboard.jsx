@@ -1,9 +1,10 @@
 import React from 'react'
-import Sidebar from '../../templates/Sidebar/Sidebar'
+import Hero from '../Hero/Hero'
 export const Dashboard = () => {
   return (
     <>
-    <div>Dash medico</div>
+    <Hero />
+    <div>Panel de Doctor</div>
         </>
   )
 }

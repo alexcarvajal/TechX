@@ -1,0 +1,66 @@
+/* App.css */
+.hero {
+  background: url('../../assets/DoctorHero.jpg') no-repeat center center/cover;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+}
+
+.hero-main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  margin-left: 20px;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin: 0;
+  color: #333;
+}
+
+.hero h1 span {
+  color: #2a58ad;
+}
+
+.hero p {
+  color: #666;
+  font-size: 1em;
+  margin: 20px 0;
+}
+
+.hero button {
+  background-color: #2a58ad;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.hero-image {
+  margin-top: 30px;
+}
+
+.contact-info {
+  background-color: #2a58ad;
+  color: white;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.contact-item {
+  text-align: center;
+}
