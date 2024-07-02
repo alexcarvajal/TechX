@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Sidebar.css';
-import Logo from '../../assets/logo2.png';
+import Logo from '../../assets/LogoHospital.jpg';
 import { Link, useNavigate } from 'react-router-dom';
 import { FaHome, FaBriefcase, FaUsers, FaCalendarAlt, FaSignOutAlt } from 'react-icons/fa'; // FaHeartbeat eliminado ya que no se utiliza
 

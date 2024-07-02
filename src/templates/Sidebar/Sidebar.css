@@ -9,7 +9,7 @@ body {
 .navbar {
     width: 100%;
     height: 100px; /* Altura del navbar horizontal */
-    background-color: #74BB45;
+    background-color: #FBFAFD;
     border-bottom: 1px solid #ddd;
     position: fixed;
     top: 0;
@@ -41,7 +41,7 @@ body {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: #F7FCFB;
+    color: #2D793B;
     transition: background 0.3s;
     cursor: pointer;
     background: none;
@@ -50,7 +50,7 @@ body {
 }
 
 .navbar-item:hover {
-    background-color: #2d793b;
+    background-color: #74BB45;
     border-radius: 5px;
 }
 

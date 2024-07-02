@@ -12,16 +12,16 @@ const Hero = () => {
         </div>
         <div className="contact-info">
           <div className="contact-item">
-            <div>Emergency Call</div>
-            <div>+0923410849252<br />+0923410849252</div>
+            <div>Llamada de Emergencia</div>
+            <div>#123<br />+57123124141421</div>
           </div>
           <div className="contact-item">
-            <div>Location</div>
-            <div>Model Town, Central Falat Lahore<br />Pakistan</div>
+            <div>Ciudad</div>
+            <div>Popayán, Cauca<br />Colombia</div>
           </div>
           <div className="contact-item">
-            <div>Ambulance</div>
-            <div>+0923410849252<br />+0923410849252</div>
+            <div>Servicio de Ambulancia</div>
+            <div>+57123141414141<br />+57123141414141</div>
           </div>
         </div>
       </div>
