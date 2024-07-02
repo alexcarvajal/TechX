@@ -3,7 +3,7 @@ import Sidebar from '../../templates/Sidebar/Sidebar'
 export const Dashboard = () => {
   return (
     <>
-    <Sidebar />
-    </>
+    <div>dashboard</div>
+        </>
   )
 }

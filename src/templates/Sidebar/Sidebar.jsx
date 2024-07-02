@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Sidebar.css';
-import Logo from '/logo2.png'
+import Logo from '/logo2.png';
 import { Link, useNavigate } from 'react-router-dom';
 import { FaHome, FaBriefcase, FaUsers, FaCalendarAlt, FaSignOutAlt } from 'react-icons/fa';
 
@@ -13,12 +13,10 @@ function Sidebar() {
     };
 
     const handleLogout = () => {
-        // Eliminar el token del localStorage
         localStorage.removeItem('authToken');
         console.log('Cerrando sesión...');
-        navigate('/login'); // Redirigir al login
+        navigate('/');
     };
-
 
     return (
         <div className={`navbar ${isOpen ? 'open' : 'closed'}`}>
@@ -31,7 +29,7 @@ function Sidebar() {
                 </button>
             </div>
             <nav className="navbar-menu">
-                <Link to="/" className="navbar-item">
+                <Link to="/dashboard" className="navbar-item">
                     <FaHome className="icon" />
                     {isOpen && <span>Inicio</span>}
                 </Link>
@@ -39,7 +37,7 @@ function Sidebar() {
                     <FaBriefcase className="icon" />
                     {isOpen && <span>Proyectos</span>}
                 </Link>
-                <Link to="/connections" className="navbar-item">
+                <Link to="/nosotros" className="navbar-item">
                     <FaUsers className="icon" />
                     {isOpen && <span>Nosotros</span>}
                 </Link>
@@ -47,12 +45,11 @@ function Sidebar() {
                     <FaCalendarAlt className="icon" />
                     {isOpen && <span>Eventos</span>}
                 </Link>
-                <Link to="/login" className="navbar-item logout-button" onClick={handleLogout}>
+                <Link to="/" className="navbar-item logout-button" onClick={handleLogout}>
                     <FaSignOutAlt className="icon" />
                     {isOpen && <span>Salir</span>}
                 </Link>
             </nav>
-
         </div>
     );
 }

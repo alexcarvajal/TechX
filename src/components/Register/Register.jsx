@@ -39,7 +39,7 @@ function Register() {
 
         <div className="register-header">
           <h2>Crea tu cuenta</h2>
-          <p>Ya tienes cuenta? <Link to="/login">Ingresa</Link></p>
+          <p>Ya tienes cuenta? <Link to="/">Ingresa</Link></p>
         </div>
         <form className="register-form" onSubmit={handleSubmit}>
           <input
