@@ -5,9 +5,9 @@ const Hero = () => {
         <div className="hero">
         <div className="hero-main">
           <div className="hero-content">
-            <h1>Find & Search Your <span>Favourite</span> Doctor</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspend ultrices gravida.</p>
-            <button>Get Appointment</button>
+            <h1>Encuentra <span>Tu Doctor </span> Favorito</h1>
+            <p>Programa tu cita y configura recordatorios para tus medicamentos</p>
+            <button>Agenda tu cita aqui!</button>
           </div>
         </div>
         <div className="contact-info">

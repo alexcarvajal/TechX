@@ -4,7 +4,6 @@ export const Dashboard = () => {
   return (
     <>
     <Hero />
-    <div>Panel de Doctor</div>
         </>
   )
 }

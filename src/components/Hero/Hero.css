@@ -4,7 +4,7 @@
   text-align: left;
   display: flex;
   flex-direction: column;
-  height: 500px;
+  height: calc(100vh - 100px);
 }
 
 .hero-main {
@@ -28,17 +28,17 @@
 }
 
 .hero h1 span {
-  color: #2a58ad;
+  color: #74BB45;
 }
 
 .hero p {
   color: #666;
-  font-size: 1em;
+  font-size: 1.5em;
   margin: 20px 0;
 }
 
 .hero button {
-  background-color: #2a58ad;
+  background-color: #74BB45;
   color: white;
   border: none;
   padding: 15px 30px;
@@ -52,7 +52,7 @@
 }
 
 .contact-info {
-  background-color: #2a58ad;
+  background-color: #2D793B;
   color: white;
   padding: 20px 0;
   display: flex;

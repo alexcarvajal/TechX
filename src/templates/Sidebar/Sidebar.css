@@ -1,3 +1,11 @@
+/* App.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .navbar {
     width: 100%;
     height: 100px; /* Altura del navbar horizontal */
@@ -13,10 +21,6 @@
     z-index: 1000;
 }
 
-.navbar.closed {
-    height: 60px;
-}
-
 .navbar-header {
     display: flex;
     align-items: center;
@@ -26,14 +30,6 @@
 
 .logo img {
     width: 80px;
-}
-
-.toggle-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 24px;
-    color: #F7FCFB;
 }
 
 .navbar-menu {
@@ -68,29 +64,19 @@
     margin-left: auto; /* Empuja el botón "Salir" al extremo derecho */
 }
 
-.navbar.closed .navbar-item .icon,
-.logout-button {
-    margin: 0;
-}
-
-.navbar.closed .navbar-item .logout-button {
-    justify-content: center;
-}
-
-.navbar.closed .navbar-item span {
-    display: none;
-}
-
 /* Ajuste del contenido para que comience debajo del navbar */
 .content {
     margin-top: 100px; /* Altura del navbar */
-    padding: 20px;
+    padding: 0px;
 }
 
 /* Media Queries */
 @media (max-width: 768px) {
     .navbar-menu {
         gap: 10px;
+    }
+    .navbar-item span {
+        display: none;
     }
 }
 
@@ -100,5 +86,8 @@
     }
     .navbar-menu {
         gap: 5px;
+    }
+    .navbar-item span {
+        display: none;
     }
 }
