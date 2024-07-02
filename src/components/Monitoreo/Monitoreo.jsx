@@ -18,9 +18,8 @@ export const Monitoreo = () => {
         const docSnap = await getDoc(docRef);
 
         if (docSnap.exists()) {
-          const data = docSnap.data();
-          console.log('Data fetched from Firestore:', data);
-          setAccessToken(docSnap.data().acessToken); 
+          const data_token = docSnap.data();
+          setAccessToken(data_token.TokenPowerBi); 
         } else {
           console.log('No such document!');
         }
@@ -31,6 +30,7 @@ export const Monitoreo = () => {
 
     fetchData();
   }, []);
+ 
   return (
     <>
       <div>
