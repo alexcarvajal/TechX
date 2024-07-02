@@ -7,6 +7,8 @@ import { Dashboard } from "./components/Dashboard/Dashboard";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 import AboutUs from "./components/AboutUs/AboutUs";
 import Sidebar from './templates/Sidebar/Sidebar';
+import Home from './components/Home/Home';
+import Eventos from './components/Eventos/Eventos';
 function Layout({ children }) {
   return (
     <div className="app-layout">
@@ -21,14 +23,17 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route index element={<Login />} />
+        <Route index element={<Home />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
         <Route path="*" element={
           <Layout>
             <Routes>
               <Route path="/dashboard" element={<Dashboard isAuthenticated={isAuthenticated} />} />
               <Route path="/monitoreo" element={<Monitoreo isAuthenticated={isAuthenticated} />} />
               <Route path="/nosotros" element={<AboutUs isAuthenticated={isAuthenticated} />} />
+              <Route path="/eventos" element={<Eventos isAuthenticated={isAuthenticated} />} />
+
               {/* Otras rutas protegidas */}
             </Routes>
           </Layout>

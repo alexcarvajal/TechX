@@ -36,7 +36,7 @@ function Sidebar() {
                         <FaUsers className="icon" />
                         <span>Nosotros</span>
                     </Link>
-                    <Link to="/events" className="navbar-item">
+                    <Link to="/eventos" className="navbar-item">
                         <FaCalendarAlt className="icon" />
                         <span>Eventos</span>
                     </Link>

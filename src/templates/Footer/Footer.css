@@ -1,0 +1,16 @@
+/* Footer.css */
+.contact-info {
+    background-color: #2D793B;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    position: fixed; /* Fija el footer en la parte inferior de la ventana */
+    bottom: 0;
+    left: 0;
+}
+
+.contact-item {
+    text-align: center;
+}

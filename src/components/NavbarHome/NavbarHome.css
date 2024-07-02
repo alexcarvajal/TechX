@@ -6,12 +6,12 @@ body {
     box-sizing: border-box;
 }
 
-.navbar {
+.navbarHome {
     width: 100%;
-    height: 100px; /* Altura del navbar horizontal */
+    height: 100px; /* Altura del navbarHome horizontal */
     background-color: #FBFAFD;
     border-bottom: 1px solid #ddd;
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     display: flex;
@@ -21,7 +21,7 @@ body {
     z-index: 1000;
 }
 
-.navbar-header {
+.navbarHome-header {
     display: flex;
     align-items: center;
     width: 100%;
@@ -32,12 +32,12 @@ body {
     width: 80px;
 }
 
-.navbar-menu {
+.navbarHome-menu {
     display: flex;
     gap: 20px;
 }
 
-.navbar-item {
+.navbarHome-item {
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -49,12 +49,12 @@ body {
     padding: 10px;
 }
 
-.navbar-item:hover {
+.navbarHome-item:hover {
     background-color: #74BB45;
     border-radius: 5px;
 }
 
-.navbar-item .icon {
+.navbarHome-item .icon {
     width: 24px;
     height: 24px;
     margin-right: 10px;
@@ -64,18 +64,18 @@ body {
     margin-left: auto; /* Empuja el botón "Salir" al extremo derecho */
 }
 
-/* Ajuste del contenido para que comience debajo del navbar */
+/* Ajuste del contenido para que comience debajo del navbarHome */
 .content {
-    margin-top: 100px; /* Altura del navbar */
+    margin-top: 100px; /* Altura del navbarHome */
     padding: 0px;
 }
 
 /* Media Queries */
 @media (max-width: 768px) {
-    .navbar-menu {
+    .navbarHome-menu {
         gap: 10px;
     }
-    .navbar-item span {
+    .navbarHome-item span {
         display: none;
     }
 }
@@ -84,27 +84,10 @@ body {
     .logo img {
         width: 60px;
     }
-    .navbar-menu {
+    .navbarHome-menu {
         gap: 5px;
     }
-    .navbar-item span {
+    .navbarHome-item span {
         display: none;
     }
 }
-@media (max-width: 320px) {
-    .logo {
-        width: 10px;
-    }
-    .navbar-menu {
-        gap: 0px;
-    }
-    .navbar-item span {
-        display: none;
-    }
-    .navbar-item .icon {
-        width: 16px;
-        height: 16px;
-    }
-    
-}
-

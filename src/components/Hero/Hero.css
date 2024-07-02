@@ -4,7 +4,7 @@
   text-align: left;
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 150px);
 }
 
 .hero-main {
@@ -37,7 +37,8 @@
   margin: 20px 0;
 }
 
-.hero button {
+
+.button-hero{
   background-color: #74BB45;
   color: white;
   border: none;
@@ -45,6 +46,7 @@
   font-size: 1em;
   cursor: pointer;
   border-radius: 5px;
+  text-decoration: none;
 }
 
 .hero-image {
