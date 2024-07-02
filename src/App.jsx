@@ -2,7 +2,10 @@ import Login from "./components/Login/Login"
 import Register from "./components/Register/Register";
 import { Dashboard } from "./components/Dashboard/Dashboard";
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
+
 function App() {
+  const isAutenticated = !! localStorage.getItem('authToken')
   return (
   <Router>
     <Routes>

@@ -20,6 +20,7 @@ function Login() {
       if (response.status === 200) {
         // Manejar el éxito del login
         console.log('Login exitoso', response.data);
+        localStorage.setItem('authToken', response.data.token);
         navigate('/dashboard'); // Redirigir al dashboard o a la página deseada
       }
     } catch (error) {
@@ -34,25 +35,25 @@ function Login() {
         <img src={Logo} alt="Logo" className="logo" />
 
         <div className="login-header">
-          <h2>Welcome Back</h2>
-          <p>Don't have an account yet? <Link to="/register">Create an account</Link></p>
+          <h2>Hola! Ingresa con tu cuenta</h2>
+          <p>¿No tienes cuenta? <Link to="/register">Crea tu cuenta!</Link></p>
         </div>
         <form className="login-form" onSubmit={handleSubmit}>
           <input
             type="email"
-            placeholder="Email Address"
+            placeholder="Tu correo"
             className="input-field"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
           <input
             type="password"
-            placeholder="Password"
+            placeholder="Contraseña"
             className="input-field"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button type="submit" className="login-button">Login</button>
+          <button type="submit" className="login-button">Ingresa</button>
         </form>
       </div>
     </div>

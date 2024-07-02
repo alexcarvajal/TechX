@@ -38,39 +38,39 @@ function Register() {
         <img src={Logo} alt="Logo" className="logo" />
 
         <div className="register-header">
-          <h2>Create an Account</h2>
-          <p>Already have an account? <Link to="/login">Login</Link></p>
+          <h2>Crea tu cuenta</h2>
+          <p>Ya tienes cuenta? <Link to="/login">Ingresa</Link></p>
         </div>
         <form className="register-form" onSubmit={handleSubmit}>
           <input
             type="text"
-            placeholder="Name"
+            placeholder="Nombre"
             className="input-field"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
           <input
             type="text"
-            placeholder="LastName"
+            placeholder="Apellido"
             className="input-field"
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
           />
           <input
             type="email"
-            placeholder="Email Address"
+            placeholder="Correo electrónico"
             className="input-field"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
           <input
             type="password"
-            placeholder="Password"
+            placeholder="Contraseña"
             className="input-field"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button type="submit" className="register-button">Register</button>
+          <button type="submit" className="register-button">Regrístrate!</button>
         </form>
       </div>
     </div>
