@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Sidebar.css';
 import Logo from '../../assets/LogoHospital.jpg';
 import { Link, useNavigate } from 'react-router-dom';
-import { FaHome, FaBriefcase, FaUsers, FaCalendarAlt, FaSignOutAlt } from 'react-icons/fa'; // FaHeartbeat eliminado ya que no se utiliza
+import { FaHome, FaBriefcase, FaUsers, FaCalendarAlt, FaSignOutAlt, FaHeartbeat } from 'react-icons/fa'; // FaHeartbeat eliminado ya que no se utiliza
 
 function Sidebar() {
     const navigate = useNavigate();
@@ -27,6 +27,10 @@ function Sidebar() {
                     <Link to="/jobs" className="navbar-item">
                         <FaBriefcase className="icon" />
                         <span>Proyectos</span>
+                    </Link>
+                    <Link to="/monitoreo" className="navbar-item">
+                        <FaHeartbeat className="icon" />
+                        <span>Monitoreo</span>
                     </Link>
                     <Link to="/nosotros" className="navbar-item">
                         <FaUsers className="icon" />
