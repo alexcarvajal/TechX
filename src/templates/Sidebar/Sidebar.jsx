@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Sidebar.css';
 import Logo from '/logo2.png';
 import { Link, useNavigate } from 'react-router-dom';
-import { FaHome, FaBriefcase, FaUsers, FaCalendarAlt, FaSignOutAlt } from 'react-icons/fa';
+import { FaHome, FaBriefcase, FaUsers, FaCalendarAlt, FaSignOutAlt, FaHeartbeat } from 'react-icons/fa';
 
 function Sidebar() {
     const [isOpen, setIsOpen] = useState(true);
@@ -36,6 +36,10 @@ function Sidebar() {
                 <Link to="/jobs" className="navbar-item">
                     <FaBriefcase className="icon" />
                     {isOpen && <span>Proyectos</span>}
+                </Link>
+                <Link to="/monitoreo" className="navbar-item">
+                    <FaHeartbeat className="icon" />
+                    {isOpen && <span>Monitoreo</span>}
                 </Link>
                 <Link to="/nosotros" className="navbar-item">
                     <FaUsers className="icon" />
