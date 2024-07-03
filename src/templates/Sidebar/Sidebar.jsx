@@ -8,6 +8,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { db } from '../../firebaseConfig';
 import { doc, getDoc, onSnapshot } from 'firebase/firestore';
+import emailjs from 'emailjs-com'
 
 function Sidebar() {
     const navigate = useNavigate();
@@ -17,6 +18,19 @@ function Sidebar() {
         console.log('Cerrando sesión...');
         navigate('/');
     };
+
+    function enviarEmail(e) {
+        e.preventDefault();
+    
+        emailjs.sendForm('service_vqqq2og', 'template_hmlf1w9', e.target, 'JlU2lgM-jzn3dCHcJ')
+          .then((result) => {
+              console.log(result.text);
+          }, (error) => {
+              console.log(error.text);
+          });
+    };
+    //form onsubmit={enviarEmail}
+
 
     const [medicamentos, setAlertMedicamentos] = useState([]);
     const [openMedicamentos, setOpenMedicamentos] = useState(false);
