@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import "./card.css";
 import './Sidebar.css';
 import Logo from '../../assets/LogoHospital.jpg';
 import { Link, useNavigate } from 'react-router-dom';
-import { FaHome, FaBriefcase, FaUsers, FaCalendarAlt, FaSignOutAlt, FaHeartbeat } from 'react-icons/fa'; // FaHeartbeat eliminado ya que no se utiliza
+import { FaHome, FaBriefcase, FaUsers, FaCalendarAlt, FaSignOutAlt, FaHeartbeat, FaRegClock, FaPills } from 'react-icons/fa'; // FaHeartbeat eliminado ya que no se utiliza
 
 function Sidebar() {
     const navigate = useNavigate();
@@ -13,6 +14,48 @@ function Sidebar() {
         navigate('/');
     };
 
+    const [medicamentos, setAlertMedicamentos] = useState([]);
+    const [openMedicamentos, setOpenMedicamentos] = useState(false);
+
+    const [citas, setAlertCitas] = useState([]);
+    const [openCitas, setOpenCitas] = useState(false);
+
+    useEffect(() => {
+        const interval1= setInterval(() => {
+            setAlertMedicamentos((prevNotifications1) => [...prevNotifications1, { id: prevNotifications1.length, message: 'Recordatorio medicamento' }]);
+        }, 3000);
+
+        return () => clearInterval(interval1);
+    }, []);
+
+    useEffect(() => {
+        const interval2 = setInterval(() => {
+            setAlertCitas((prevNotifications) => [...prevNotifications, { id: prevNotifications.length, message: 'Recordatorio cita' }]);
+        }, 15000);
+
+        return () => clearInterval(interval2);
+    }, []);
+
+    const handleReadMedicamentos = () => {
+        setAlertMedicamentos([]);
+        setOpenMedicamentos(false);
+    };
+
+    const handleReadCitas = () => {
+        setAlertCitas([]);
+        setOpenCitas(false);
+    };
+
+    const displayNotificationMedicamentos = (notification1) => (
+        <div key={notification1.id} className="notification">
+            {notification1.message}
+        </div>
+    );
+    const displayNotificationCitas = (notification2) => (
+        <div key={notification2.id} className="notification">
+            {notification2.message}
+        </div>
+    );
     return (
         <div className="navbar">
             <div className="navbar-header">
@@ -41,6 +84,41 @@ function Sidebar() {
                         <span>Eventos</span>
                     </Link>
                 </nav>
+                <div className="navbar_push">
+                    <div className="icons_push">
+                        <div onClick={() => setOpenMedicamentos(!openMedicamentos)}>
+                            <FaPills className="ic_push" alt="" />
+                            {
+                                medicamentos.length >0 &&
+                                    <div className="counter_Medicamento">{medicamentos.length}</div>
+                            }                        
+                            {openMedicamentos && (
+                            <div className="notifications_push">
+                            {medicamentos.map((n) => displayNotificationMedicamentos(n))}
+                                <button className="nButton_push" onClick={handleReadMedicamentos}>
+                                    Eliminar
+                                </button>
+                                </div>
+                            )}
+                        </div>
+                        <div className="icon_push" onClick={() => setOpenCitas(!openCitas)}>
+                            <FaRegClock className="ic_push" alt="" /> 
+                            {
+                                citas.length >0 &&
+                                    <div className="counter_Cita">{citas.length}</div>
+                            }
+                            {openCitas && (
+                                <div className="notifications_push">
+                                {citas.map((n) => displayNotificationCitas(n))}
+                                <button className="nButton_push" onClick={handleReadCitas}>
+                                    Vaciar
+                                </button>
+                                </div>
+                            )}                      
+                        </div>
+                    </div>
+                                        
+                </div>
                 <Link to="/" className="navbar-item logout-button" onClick={handleLogout}>
                     <FaSignOutAlt className="icon" />
                     <span>Salir</span>
