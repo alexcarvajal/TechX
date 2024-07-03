@@ -4,10 +4,12 @@ import './Sidebar.css';
 import Logo from '../../assets/LogoHospital.jpg';
 import { Link, useNavigate } from 'react-router-dom';
 import { FaHome, FaBriefcase, FaUsers, FaCalendarAlt, FaSignOutAlt, FaHeartbeat, FaRegClock, FaPills } from 'react-icons/fa'; // FaHeartbeat eliminado ya que no se utiliza
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Sidebar() {
     const navigate = useNavigate();
-
+    
     const handleLogout = () => {
         localStorage.removeItem('authToken');
         console.log('Cerrando sesión...');
@@ -21,9 +23,32 @@ function Sidebar() {
     const [openCitas, setOpenCitas] = useState(false);
 
     useEffect(() => {
+        if (citas) {
+            notifyCitas();
+            <ToastContainer />
+        }
+    }, [citas]);
+
+    const notifyCitas = () => {
+        toast("Tienes una cita pendiente!");
+    };
+
+    useEffect(() => {
+        if (medicamentos) {
+            notifyMedicamentos();
+            <ToastContainer />
+        }
+    }, [medicamentos]);
+
+    const notifyMedicamentos = () => {
+        toast("Alerta de medicamento!");
+    };
+   
+
+    useEffect(() => {
         const interval1= setInterval(() => {
             setAlertMedicamentos((prevNotifications1) => [...prevNotifications1, { id: prevNotifications1.length, message: 'Recordatorio medicamento' }]);
-        }, 3000);
+        }, 5000);
 
         return () => clearInterval(interval1);
     }, []);
@@ -31,7 +56,7 @@ function Sidebar() {
     useEffect(() => {
         const interval2 = setInterval(() => {
             setAlertCitas((prevNotifications) => [...prevNotifications, { id: prevNotifications.length, message: 'Recordatorio cita' }]);
-        }, 15000);
+        }, 9000);
 
         return () => clearInterval(interval2);
     }, []);
@@ -106,7 +131,7 @@ function Sidebar() {
                             {
                                 citas.length >0 &&
                                     <div className="counter_Cita">{citas.length}</div>
-                            }
+                            }  
                             {openCitas && (
                                 <div className="notifications_push">
                                 {citas.map((n) => displayNotificationCitas(n))}
@@ -114,7 +139,14 @@ function Sidebar() {
                                     Vaciar
                                 </button>
                                 </div>
-                            )}                      
+                            )} 
+                            {
+                                (medicamentos.length > 0 || citas.length > 0) &&
+                                <div>
+                                    <ToastContainer />
+                                </div>                                
+                            }    
+                                                                       
                         </div>
                     </div>
                                         
