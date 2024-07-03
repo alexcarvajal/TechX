@@ -6,6 +6,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { FaHome, FaBriefcase, FaUsers, FaCalendarAlt, FaSignOutAlt, FaHeartbeat, FaRegClock, FaPills } from 'react-icons/fa'; // FaHeartbeat eliminado ya que no se utiliza
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { db } from '../../firebaseConfig';
+import { doc, getDoc, onSnapshot } from 'firebase/firestore';
 
 function Sidebar() {
     const navigate = useNavigate();
@@ -43,23 +45,62 @@ function Sidebar() {
     const notifyMedicamentos = () => {
         toast("Alerta de medicamento!");
     };
-   
+       
+    const [msjMedicamento, setMsjMedicamento] = useState(null);
+    useEffect(() => {
+        const docRefMedicamento = doc(db, 'powerbitoken', 'token');    
+        const unsubscribe = onSnapshot(docRefMedicamento, (docSnapMedicamento) => {
+          if (docSnapMedicamento.exists()) {
+            const data_msjMedicamento = docSnapMedicamento.data();
+            setMsjMedicamento(data_msjMedicamento.msjMedicamento);
+          } else {
+            console.log('No such document!');
+          }
+        }, (error) => {
+          console.error('Error getting document:', error);
+        });
+        return () => unsubscribe();
+      }, []);
 
     useEffect(() => {
-        const interval1= setInterval(() => {
-            setAlertMedicamentos((prevNotifications1) => [...prevNotifications1, { id: prevNotifications1.length, message: 'Recordatorio medicamento' }]);
-        }, 17000);
+            setAlertMedicamentos((prevNotifications) => [
+                ...prevNotifications, 
+                { id: prevNotifications.length, message: msjMedicamento }
+            ]);
+    }, [msjMedicamento]);
 
-        return () => clearInterval(interval1);
-    }, []);
+    // useEffect(() => {
+    //     const interval1= setInterval(() => {
+    //         setAlertMedicamentos((prevNotifications1) => [...prevNotifications1, { id: prevNotifications1.length, message: msjMedicamento }]);
+    //         console.log(msjMedicamento);
+    //     }, 57000);
+
+    //     return () => clearInterval(interval1);
+    // }, [msjMedicamento]);
+
+    const [msjCita, setMsjCita] = useState(null);
+    useEffect(() => {
+        const docRefCita = doc(db, 'powerbitoken', 'token');    
+        const unsubscribe = onSnapshot(docRefCita, (docSnapCita) => {
+          if (docSnapCita.exists()) {
+            const data_msjCita = docSnapCita.data();
+            setMsjCita(data_msjCita.msjCita);
+          } else {
+            console.log('No such document!');
+          }
+        }, (error) => {
+          console.error('Error getting document:', error);
+        });
+        return () => unsubscribe();
+      }, []);
 
     useEffect(() => {
-        const interval2 = setInterval(() => {
-            setAlertCitas((prevNotifications) => [...prevNotifications, { id: prevNotifications.length, message: 'Recordatorio cita' }]);
-        }, 21000);
+            setAlertCitas((prevNotifications) => [
+                ...prevNotifications, 
+                { id: prevNotifications.length, message: msjCita }
+            ]);
+    }, [msjCita]); 
 
-        return () => clearInterval(interval2);
-    }, []);
 
     const handleReadMedicamentos = () => {
         setAlertMedicamentos([]);
