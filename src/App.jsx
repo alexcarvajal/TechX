@@ -27,13 +27,14 @@ function App() {
         <Route index element={<Home />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/nosotros" element={<AboutUs isAuthenticated={isAuthenticated} />} />
+
         <Route path="*" element={
           <Layout>
             <Routes>
               <Route path="/dashboard" element={<Dashboard isAuthenticated={isAuthenticated} />} />
               <Route path="/dashboard-doctor" element={<DashboardDoctor isAuthenticated={isAuthenticated} />} />
               <Route path="/monitoreo" element={<Monitoreo isAuthenticated={isAuthenticated} />} />
-              <Route path="/nosotros" element={<AboutUs isAuthenticated={isAuthenticated} />} />
               <Route path="/eventos" element={<Eventos isAuthenticated={isAuthenticated} />} />
 
               {/* Otras rutas protegidas */}

@@ -133,10 +133,6 @@ function Sidebar() {
                         <FaHome className="icon" />
                         <span>Inicio</span>
                     </Link>
-                    <Link to="/jobs" className="navbar-item">
-                        <FaBriefcase className="icon" />
-                        <span>Proyectos</span>
-                    </Link>
                     <Link to="/monitoreo" className="navbar-item">
                         <FaHeartbeat className="icon" />
                         <span>Monitoreo</span>

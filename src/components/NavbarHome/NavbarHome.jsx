@@ -12,15 +12,15 @@ const NavbarHome = () => {
                     <img src={Logo} alt="Logo" />
                 </div>
                 <nav className="navbarHome-menu">
-                    <Link to="/dashboard" className="navbarHome-item">
+                    <Link to="/" className="navbarHome-item">
                         <FaHome className="icon" />
                         <span>Inicio</span>
                     </Link>
-                    <Link to="/jobs" className="navbarHome-item">
+                 {/*    <Link to="/jobs" className="navbarHome-item">
                         <FaBriefcase className="icon" />
                         <span>Proyectos</span>
-                    </Link>
-                    <Link to="/monitoreo" className="navbarHome-item">
+                    </Link> */}
+                    <Link to="/login" className="navbarHome-item">
                         <FaHeartbeat className="icon" />
                         <span>Monitoreo</span>
                     </Link>
@@ -28,7 +28,7 @@ const NavbarHome = () => {
                         <FaUsers className="icon" />
                         <span>Nosotros</span>
                     </Link>
-                    <Link to="/events" className="navbarHome-item">
+                    <Link to="/login" className="navbarHome-item">
                         <FaCalendarAlt className="icon" />
                         <span>Citas</span>
                     </Link>
