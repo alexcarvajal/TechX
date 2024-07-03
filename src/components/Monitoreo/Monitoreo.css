@@ -1,4 +1,5 @@
 .Embed-container {
     position: relative;
     width: 100vw;  /* Ocupa todo el ancho de la ventana */
-    height: calc(100vh - 110px);}
+    height: calc(100vh - 180px);
+}

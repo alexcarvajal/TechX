@@ -17,7 +17,7 @@ export const Dashboard = () => {
   }
   return (
     <>
-      <Citas />
+      <Hero />
       <Footer />
     </>
   //   ,

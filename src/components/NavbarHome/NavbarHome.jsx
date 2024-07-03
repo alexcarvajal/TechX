@@ -30,10 +30,10 @@ const NavbarHome = () => {
                     </Link>
                     <Link to="/events" className="navbarHome-item">
                         <FaCalendarAlt className="icon" />
-                        <span>Eventos</span>
+                        <span>Citas</span>
                     </Link>
                 </nav>
-                <Link to="/" className="navbarHome-item logout-button">
+                <Link to="/login" className="navbarHome-item logout-button">
                     <FaSignInAlt className="icon" />
                     <span>Ingresa</span>
                 </Link>

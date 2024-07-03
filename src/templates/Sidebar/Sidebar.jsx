@@ -48,7 +48,7 @@ function Sidebar() {
     useEffect(() => {
         const interval1= setInterval(() => {
             setAlertMedicamentos((prevNotifications1) => [...prevNotifications1, { id: prevNotifications1.length, message: 'Recordatorio medicamento' }]);
-        }, 17000);
+        }, 170000);
 
         return () => clearInterval(interval1);
     }, []);
@@ -56,7 +56,7 @@ function Sidebar() {
     useEffect(() => {
         const interval2 = setInterval(() => {
             setAlertCitas((prevNotifications) => [...prevNotifications, { id: prevNotifications.length, message: 'Recordatorio cita' }]);
-        }, 21000);
+        }, 210000);
 
         return () => clearInterval(interval2);
     }, []);

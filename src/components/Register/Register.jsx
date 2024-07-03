@@ -10,6 +10,7 @@ function Register() {
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [role, setRole] = useState(''); // Estado para almacenar el tipo de usuario
   const navigate = useNavigate(); 
 
   const handleSubmit = async (event) => {
@@ -19,7 +20,8 @@ function Register() {
         user_name: name,
         user_lastname: lastName,
         user_email: email,
-        user_password: password
+        user_password: password,
+        role // Incluye el tipo de usuario en la solicitud
       });
       if (response.status === 201) {
         // Manejar el éxito del registro
@@ -70,7 +72,16 @@ function Register() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button type="submit" className="register-button">Regrístrate!</button>
+          <select
+            className="input-field"
+            value={role}
+            onChange={(e) => setRole(e.target.value)}
+          >
+            <option value="" disabled>Selecciona tu rol</option>
+            <option value="patient">Paciente</option>
+            <option value="doctor">Doctor</option>
+          </select>
+          <button type="submit" className="register-button">¡Regístrate!</button>
         </form>
       </div>
     </div>

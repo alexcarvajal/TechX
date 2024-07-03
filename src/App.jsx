@@ -9,6 +9,7 @@ import AboutUs from "./components/AboutUs/AboutUs";
 import Sidebar from './templates/Sidebar/Sidebar';
 import Home from './components/Home/Home';
 import Eventos from './components/Eventos/Eventos';
+import DashboardDoctor from './components/DashboardDoctor/DashboardDoctor';
 function Layout({ children }) {
   return (
     <div className="app-layout">
@@ -30,6 +31,7 @@ function App() {
           <Layout>
             <Routes>
               <Route path="/dashboard" element={<Dashboard isAuthenticated={isAuthenticated} />} />
+              <Route path="/dashboard-doctor" element={<DashboardDoctor isAuthenticated={isAuthenticated} />} />
               <Route path="/monitoreo" element={<Monitoreo isAuthenticated={isAuthenticated} />} />
               <Route path="/nosotros" element={<AboutUs isAuthenticated={isAuthenticated} />} />
               <Route path="/eventos" element={<Eventos isAuthenticated={isAuthenticated} />} />
