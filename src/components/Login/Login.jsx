@@ -17,11 +17,18 @@ function Login() {
         user_email: email,
         user_password: password
       });
+
       if (response.status === 200) {
         // Manejar el éxito del login
         console.log('Login exitoso', response.data);
-        localStorage.setItem('authToken', response.data.token);
-        navigate('/dashboard'); // Redirigir al dashboard o a la página deseada
+        const { role } = response.data.user;
+
+        // Redirigir según el rol del usuario
+        if (role === 'doctor') {
+          navigate('/dashboard-doctor');
+        } else if (role === 'patient') {
+          navigate('/dashboard');
+        }
       }
     } catch (error) {
       console.error('Error al iniciar sesión:', error);

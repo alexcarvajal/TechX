@@ -9,7 +9,7 @@ import AboutUs from "./components/AboutUs/AboutUs";
 import Sidebar from './templates/Sidebar/Sidebar';
 import Home from './components/Home/Home';
 import Eventos from './components/Eventos/Eventos';
-import DashboardDoctor from './components/DashboardDoctor/DashboardDoctor';
+import {DashboardDoctor} from './components/DashboardDoctor/DashboardDoctor';
 function Layout({ children }) {
   return (
     <div className="app-layout">
