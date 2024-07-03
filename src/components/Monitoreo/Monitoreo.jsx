@@ -37,8 +37,8 @@ export const Monitoreo = () => {
         <PowerBIEmbed
           embedConfig={{
             type: 'report',
-            id: 'b8565d9d-0364-4698-b1de-fc991292c8dd',
-            embedUrl: 'https://app.powerbi.com/reportEmbed?reportId=b8565d9d-0364-4698-b1de-fc991292c8dd&groupId=40cbc417-80a7-4411-9ee1-3d27c7126ed2&w=2&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLVVTLUVBU1QyLXJlZGlyZWN0LmFuYWx5c2lzLndpbmRvd3MubmV0IiwiZW1iZWRGZWF0dXJlcyI6eyJ1c2FnZU1ldHJpY3NWTmV4dCI6dHJ1ZX19',
+            id: '5f8aef32-b9b8-4f42-9538-5d1872923d4e',
+            embedUrl: 'https://app.powerbi.com/reportEmbed?reportId=5f8aef32-b9b8-4f42-9538-5d1872923d4e&groupId=40cbc417-80a7-4411-9ee1-3d27c7126ed2&w=2&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLVVTLUVBU1QyLXJlZGlyZWN0LmFuYWx5c2lzLndpbmRvd3MubmV0IiwiZW1iZWRGZWF0dXJlcyI6eyJ1c2FnZU1ldHJpY3NWTmV4dCI6dHJ1ZX19',
             accessToken: accessToken,
             tokenType: models.TokenType.Aad,
             settings: {
