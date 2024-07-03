@@ -1,0 +1,24 @@
+/* CitasAgendadas.css */
+.scheduled-appointments {
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  .scheduled-appointments h3 {
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .scheduled-appointments ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .scheduled-appointments li {
+    background: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  

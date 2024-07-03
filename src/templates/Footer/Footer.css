@@ -1,5 +1,6 @@
 /* Footer.css */
 .contact-info {
+    display: flex;
     background-color: #2D793B;
     color: white;
     padding: 20px 0;

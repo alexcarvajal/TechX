@@ -43,7 +43,7 @@ function Login() {
 
         <div className="login-header">
           <h2>Hola! Ingresa con tu cuenta</h2>
-          <p>¿No tienes cuenta? <Link to="/register">Crea tu cuenta!</Link></p>
+          <p>¿No tienes cuenta? <Link to="/register">Creala aquí!!</Link></p>
         </div>
         <form className="login-form" onSubmit={handleSubmit}>
           <input

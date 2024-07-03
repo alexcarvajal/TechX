@@ -143,7 +143,7 @@ function Sidebar() {
                     <img src={Logo} alt="Logo" />
                 </div>
                 <nav className="navbar-menu">
-                    <Link to="/dashboard" className="navbar-item">
+                    <Link to="/" className="navbar-item">
                         <FaHome className="icon" />
                         <span>Inicio</span>
                     </Link>
@@ -157,7 +157,11 @@ function Sidebar() {
                     </Link>
                     <Link to="/eventos" className="navbar-item">
                         <FaCalendarAlt className="icon" />
-                        <span>Eventos</span>
+                        <span>Citas agendadas</span>
+                    </Link>
+                    <Link to="/citas-agendadas" className="navbar-item">
+                        <FaCalendarAlt className="icon" />
+                        <span>Citas a revisar</span>
                     </Link>
                 </nav>
                 <div className="navbar_push">

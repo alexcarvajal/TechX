@@ -1,51 +1,64 @@
-/* AppointmentScheduler.css */
 .appointment-scheduler {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background: #f7f7f7;
-    margin-top:10%;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  .appointment-scheduler h2 {
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  .label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  .datepicker,
-  .timepicker {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 16px;
-  }
-  
-  button {
-    background-color: #74bb45;
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background 0.3s;
-  }
-  
-  button:hover {
-    background-color: #5ea33c;
-  }
-  
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f7f7f7;
+  margin-top: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.appointment-scheduler h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.datepicker,
+.timepicker {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.doctor-email-select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #74bb45;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #5ea33c;
+}
+
+.confirmation-message {
+  margin-bottom: 20px;
+  color: #28a745;
+  font-weight: bold;
+}

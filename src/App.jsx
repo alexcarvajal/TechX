@@ -10,6 +10,7 @@ import Sidebar from './templates/Sidebar/Sidebar';
 import Home from './components/Home/Home';
 import Eventos from './components/Eventos/Eventos';
 import {DashboardDoctor} from './components/DashboardDoctor/DashboardDoctor';
+import CitasAgendadas from './components/CitasAgendadas/CitasAgendadas';
 function Layout({ children }) {
   return (
     <div className="app-layout">
@@ -36,7 +37,7 @@ function App() {
               <Route path="/dashboard-doctor" element={<DashboardDoctor isAuthenticated={isAuthenticated} />} />
               <Route path="/monitoreo" element={<Monitoreo isAuthenticated={isAuthenticated} />} />
               <Route path="/eventos" element={<Eventos isAuthenticated={isAuthenticated} />} />
-
+              <Route path="/citas-agendadas" element={<CitasAgendadas isAuthenticated={isAuthenticated} />} />
               {/* Otras rutas protegidas */}
             </Routes>
           </Layout>
